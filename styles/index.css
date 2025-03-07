@@ -6,6 +6,8 @@ body {
     background-color: var(--background-primary);
     margin: 0 auto;
 
+    background-image: url("../assets/Linha.png");
+
     & .logo {
         margin: 4.75rem 0 5.5625rem 7.5rem;
     }
@@ -15,11 +17,10 @@ body {
         height: 25.75rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        border: 1px solid red;
         margin-inline: 8.375rem;
 
         & #content {
-            & .info {
+            & .header {
                 display: flex;
                 flex-direction: column;
                 gap: 0.75rem;
@@ -37,20 +38,37 @@ body {
                 }
             }
 
-            & .description {
+            & .questions {
+                margin-top: 2.375rem;
                 display: flex;
                 flex-direction: column;
                 gap: 2.25rem;
-                margin-top: 2.375rem;
 
-                & div h2 {
-                    color: var(--content-brand);
-                    font: var(--font-paragraph-md);
-                }
+                & div {
+                    width: 24.125rem;
+                    height: 3.5625rem;
 
-                & div p {
-                    color: var(--content-secondary);
-                    font: var(--font-paragraph-sm);
+                    display: flex;
+                    align-items: flex-start;
+
+                    & img {
+                        margin-right: 0.5rem;
+                    }
+
+                    & .item {
+                        display: flex;
+                        flex-direction: column;
+
+                        & h2 {
+                            color: var(--content-brand);
+                            font: var(--font-paragraph-md);
+                        }
+
+                        & p {
+                            color: var(--content-secondary);
+                            font: var(--font-paragraph-sm);
+                        }
+                    }
                 }
             }
         }
