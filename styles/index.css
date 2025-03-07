@@ -1,5 +1,58 @@
 @import url(./global.css);
 
 body {
+    max-width: 85.375rem;
+    height: 48rem;
     background-color: var(--background-primary);
+    margin: 0 auto;
+
+    & .logo {
+        margin: 4.75rem 0 5.5625rem 7.5rem;
+    }
+
+    & #container {
+        max-width: 68.625rem;
+        height: 25.75rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: 1px solid red;
+        margin-inline: 8.375rem;
+
+        & #content {
+            & .info {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+                & span {
+                    font: var(--font-overline);
+                    background: var(--gradient-content);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                & h1 {
+                    font: var(--font-display-lg);
+                    color: var(--content-primary);
+                }
+            }
+
+            & .description {
+                display: flex;
+                flex-direction: column;
+                gap: 2.25rem;
+                margin-top: 2.375rem;
+
+                & div h2 {
+                    color: var(--content-brand);
+                    font: var(--font-paragraph-md);
+                }
+
+                & div p {
+                    color: var(--content-secondary);
+                    font: var(--font-paragraph-sm);
+                }
+            }
+        }
+    }
 }
