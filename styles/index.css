@@ -142,9 +142,11 @@ body {
 
 .wrapper {
     padding: 1px;
+    margin: -1px;
 
     &:focus-within {
         padding: 2px;
+        margin: -2px;
     }
 }
 
@@ -251,6 +253,3 @@ body {
     vertical-align: middle;
     margin-left: 0.5rem;
 }
-
-/* FIXME: Arrumar a bordar gradiente dos inputs e dos botões, deixar elas arrendondadas */
-/* FIXME: Remover os flickers no momento do hover dos inputs e dos botões */
