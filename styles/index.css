@@ -112,14 +112,14 @@ body {
     color: var(--content-secondary);
 }
 
-.form {
+form {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
     margin-block: 2.5rem;
 }
 
-.form .fields {
+form .fields {
     display: flex;
     gap: 0.75rem;
 }
@@ -237,19 +237,68 @@ body {
     font: var(--font-label-sm);
     color: var(--content-primary);
     position: relative;
+}
 
-    &:hover::before {
-        content: "";
-        position: absolute;
-        inset: 0px;
-        margin: -2px;
-        background: var(--gradient-border);
-        border-radius: 0.5rem;
-        z-index: -1;
+.button-sort:hover::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    margin: -2px;
+    background: var(--gradient-border);
+    border-radius: 0.5rem;
+    z-index: -1;
+    background-size: 400% 100%;
+    animation: gradientBorder 6s linear infinite;
+}
+
+@keyframes gradientBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 400% 50%;
     }
 }
 
 .button-sort img {
     vertical-align: middle;
     margin-left: 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.results {
+    display: flex;
+    padding-block: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.second-content-form {
+    margin-block: 3.6875rem;
+}
+
+.second-content-form h2,
+p {
+    text-align: center;
+}
+
+.second-content-form p {
+    margin-top: 0.25rem;
+}
+
+.number-result {
+    width: 6.25rem;
+    height: 6.25rem;
+    background-color: var(--content-brand);
+    border-radius: 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--color-inverse);
+    font: 700 3rem/1.5 "Roboto Mono", sans-serif;
 }
