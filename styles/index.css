@@ -281,8 +281,7 @@ form .fields {
     margin-block: 3.6875rem;
 }
 
-.second-content-form h2,
-p {
+.second-content-form :where(h2, p) {
     text-align: center;
 }
 
