@@ -1,16 +1,8 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+@import url(https://fonts.googleapis.com/css?family=Sora:100,200,300,regular,500,600,700,800);
 
-* {
-    margin: 0;
-    padding: 0;
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+@import url(https://fonts.googleapis.com/css?family=Roboto+Flex:regular);
 
 :root {
     --content-primary: #fff;

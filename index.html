@@ -2,120 +2,15 @@
 <html lang="pt-br">
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Sora:100,200,300,regular,500,600,700,800" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Flex:regular" rel="stylesheet" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
-
+    <script type="module" src="./src/main.js" defer></script>
+    <link rel="stylesheet" href="./src/index.css">
     <title>NUMBERS</title>
-    <link rel="stylesheet" href="./styles/index.css">
-    <script type="module" src="./src/scripts.js" defer></script>
 </head>
 
 <body>
-    <img src="./assets/logo.svg" alt="Logo da Numbers" class="logo">
 
-    <div id="container">
-
-        <div id="content">
-
-            <header>
-                <span>ONLINE - GRATUITO</span>
-                <h1>SORTEADOR DE NÚMEROS</h1>
-            </header>
-
-            <div class="questions">
-                <div>
-                    <img src="./assets/balloon.svg" alt="">
-                    <div class="item">
-                        <h2>Como funciona o sorteador de números?</h2>
-                        <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo
-                            especificado pelo usuário.
-                        </p>
-                    </div>
-
-                </div>
-                <div>
-                    <img src="./assets/balloon.svg" alt="">
-                    <div class="item">
-                        <h2>Posso escolher o intervalo dos números?</h2>
-                        <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="content-form ">
-            <h2>QUERO SORTEAR</h2>
-            <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido
-                e fácil!</p>
-
-            <form>
-                <div class="fields">
-
-                    <div class="number-field">
-                        <label>NÚMEROS</label>
-                        <div class="wrapper">
-                            <input type="text">
-                        </div>
-                    </div>
-
-                    <div class="number-field">
-                        <label>DE</label>
-                        <div class="wrapper">
-                            <input type="text">
-                        </div>
-                    </div>
-
-                    <div class="number-field">
-                        <label>DE</label>
-                        <div class="wrapper">
-                            <input type="text">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="toggle-container">
-                    <label class="toggle">
-                        <input type="checkbox" id="toggleSwitch">
-                        <span class="slider"></span>
-                    </label>
-                    <div class="status" id="status">Repetir número</div>
-                </div>
-            </form>
-
-            <button class="button-sort">
-                SORTEAR
-                <img src="./assets/arrow.svg" alt="Setinha apontando para direita">
-            </button>
-        </div>
-
-        <div class="content-form second-content-form hidden">
-            <h2>RESULTADO DO SORTEIO</h2>
-            <p>1º RESULTADO</p>
-
-            <div class="results">
-                <div class="number-result">
-                    <span>14</span>
-                </div>
-                <div class="number-result">
-                    <span>15</span>
-                </div>
-            </div>
-
-
-
-            <button class="button-sort">
-                SORTEAR NOVAMENTE
-                <img src="./assets/play.svg" alt="Ícone de replay">
-            </button>
-        </div>
-    </div>
 </body>
 
 </html>
