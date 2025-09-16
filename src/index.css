@@ -37,11 +37,11 @@
 }
 
 .description .description-wrapper .description-icon svg path {
-    stroke: var(--background-brand);
+    stroke: var(--content-brand);
 
 }
 
 .description .description-wrapper .description-information span {
-    color: var(--background-brand);
+    color: var(--content-brand);
     vertical-align: middle;
 }
