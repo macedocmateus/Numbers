@@ -1,0 +1,36 @@
+.header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.header-content .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.header-content .logo span {
+    font: var(--font-display-logo);
+    color: var(--content-primary);
+}
+
+.header-content .title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.header-content .title span {
+    font: var(--font-overline);
+    background: var(--gradient-content);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.header-content .title h1 {
+    font: var(--font-display-md);
+    color: var(--content-primary);
+}

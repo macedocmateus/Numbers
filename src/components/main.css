@@ -1,0 +1,75 @@
+.main-content {
+    margin-block: 2.7rem 5rem;
+}
+
+.main-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.main-content form .orientation {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.main-content form .orientation h2 {
+    font: var(--font-label-md);
+    color: var(--content-primary);
+}
+
+.main-content form .orientation p {
+    font: var(--font-paragraph-md);
+    color: var(--content-tertiary);
+}
+
+.main-content form .form-container {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.main-content form .form-container .form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content form .form-container .form-item:has(input:hover) span {
+    color: var(--background-brand);
+}
+
+.main-content form .form-container .form-item span {
+    font: var(--font-label-sm);
+    color: var(--content-secondary);
+}
+
+.main-content form .form-container .form-item input {
+    width: 4.5rem;
+    height: 3rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    background: var(--background-secondary, #111012);
+    font: var(--font-display-input);
+    color: var(--content-primary);
+    text-align: center;
+
+    &:hover {
+        border: 1px solid transparent;
+        background: linear-gradient(#111012, #111012)padding-box,
+            linear-gradient(to right,
+                var(--accent-green),
+                var(--accent-lime),
+                var(--accent-red),
+                var(--accent-pink),
+                var(--accent-blue)) border-box;
+    }
+
+    &:focus {
+        border: 2px solid transparent;
+    }
+}

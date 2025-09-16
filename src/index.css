@@ -1,47 +1,5 @@
 @import './styles/global.css';
 @import './template/layout.css';
-
-.header-container {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
-.header-container .logo div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-}
-
-.header-container .title {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.form {
-    margin-block: 2.7rem 5rem;
-}
-
-.description {
-    display: flex;
-    flex-direction: column;
-    gap: 2.25rem;
-
-}
-
-.description .description-wrapper {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.description .description-wrapper .description-icon svg path {
-    stroke: var(--content-brand);
-
-}
-
-.description .description-wrapper .description-information span {
-    color: var(--content-brand);
-    vertical-align: middle;
-}
+@import './components/header.css';
+@import './components/main.css';
+@import './components/footer.css';

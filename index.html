@@ -11,12 +11,10 @@
 </head>
 
 <body>
-    <div class="header-container">
+    <div class="header-content">
         <div class="logo">
-            <div>
-                <img src="./src/assets/icons/logo.svg" alt="logo">
-                <span>NUMBERS</span>
-            </div>
+            <img src="./src/assets/icons/logo.svg" alt="logo da NUMBERS">
+            <span>NUMBERS</span>
         </div>
 
         <div class="title">
@@ -25,9 +23,9 @@
         </div>
     </div>
 
-    <div class="form">
+    <div class="main-content">
         <form>
-            <div>
+            <div class="orientation">
                 <h2>QUERO SORTEAR:</h2>
                 <p>
                     defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É
@@ -35,27 +33,27 @@
                 </p>
             </div>
 
-            <div>
-                <div>
+            <div class="form-container">
+                <label class="form-item" for="quant-numbers">
                     <span>NÚMEROS</span>
-                    <input type="text">
-                </div>
-                <div>
+                    <input type="text" id="quant-numbers" name="quant-numbers">
+                </label>
+                <label class="form-item" for="starting-number">
                     <span>DE</span>
-                    <input type="text">
-                </div>
-                <div>
+                    <input type="text" id="starting-number" name="starting-number">
+                </label>
+                <label class="form-item" for="final-number">
                     <span>DE</span>
-                    <input type="text">
-                </div>
+                    <input type="text" id="final-number" name="final-number">
+                </label>
+            </div>
 
-                <div class="switch-container">
-                    <label class="switch">
-                        <input type="checkbox" id="repeat">
-                        <span class="slider"></span>
-                    </label>
-                    <label for="repeat">Não repetir número</label>
-                </div>
+            <div class="switch-container">
+                <label class="switch">
+                    <input type="checkbox" id="repeat">
+                    <span class="slider"></span>
+                </label>
+                <label for="repeat">Não repetir número</label>
             </div>
 
             <button>
@@ -70,9 +68,9 @@
         </form>
     </div>
 
-    <div class="description">
-        <div class="description-wrapper">
-            <div class="description-icon">
+    <div class="footer-content">
+        <div class="footer-wrapper">
+            <div class="footer-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M22 7.28336C22 9.92493 19.7611 12.0667 17 12.0667C16.6753 12.0671 16.3516 12.0371 16.0327 11.9772C15.8031 11.9341 15.6883 11.9126 15.6082 11.9248C15.5281 11.937 15.4145 11.9974 15.1874 12.1182C14.545 12.4598 13.7959 12.5805 13.0755 12.4465C13.3493 12.1097 13.5363 11.7056 13.6188 11.2724C13.6688 11.0074 13.545 10.75 13.3594 10.5616C12.5166 9.70577 12 8.55254 12 7.28336C12 4.64178 14.2388 2.5 17 2.5C19.7611 2.5 22 4.64178 22 7.28336Z"
@@ -87,7 +85,7 @@
                         stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </div>
-            <div class="description-information">
+            <div class="footer-information">
                 <span>
                     Como funciona o sorteador de números?
                 </span>
@@ -98,8 +96,8 @@
             </div>
         </div>
 
-        <div class="description-wrapper">
-            <div class="description-icon">
+        <div class="footer-wrapper">
+            <div class="footer-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M22 7.28336C22 9.92493 19.7611 12.0667 17 12.0667C16.6753 12.0671 16.3516 12.0371 16.0327 11.9772C15.8031 11.9341 15.6883 11.9126 15.6082 11.9248C15.5281 11.937 15.4145 11.9974 15.1874 12.1182C14.545 12.4598 13.7959 12.5805 13.0755 12.4465C13.3493 12.1097 13.5363 11.7056 13.6188 11.2724C13.6688 11.0074 13.545 10.75 13.3594 10.5616C12.5166 9.70577 12 8.55254 12 7.28336C12 4.64178 14.2388 2.5 17 2.5C19.7611 2.5 22 4.64178 22 7.28336Z"
@@ -114,7 +112,7 @@
                         stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </div>
-            <div class="description-information">
+            <div class="footer-information">
                 <span>
                     Posso escolher o intervalo dos números?
                 </span>

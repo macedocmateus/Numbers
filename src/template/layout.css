@@ -4,6 +4,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -14,33 +17,33 @@ body {
     display: grid;
     grid-template-areas:
         "header"
-        "form"
-        "description";
+        "main"
+        "footer";
     padding-block: 2.75rem;
     padding-inline: 2.25rem;
 }
 
-.header-container {
+.header-content {
     grid-area: header;
 }
 
-.form {
-    grid-area: form;
+.main-content {
+    grid-area: main;
 }
 
-.description {
-    grid-area: description;
+.footer-content {
+    grid-area: footer;
 }
 
 /* Tablet */
-@media (768px < width <=1280px) {
+@media (768px <=width <=1280px) {
     body {
         background-color: blueviolet;
     }
 }
 
 /* Desktop */
-@media (width > 1280px) {
+@media (width >=1280px) {
     body {
         background-color: brown;
     }

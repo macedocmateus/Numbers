@@ -1,0 +1,20 @@
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+
+}
+
+.footer-content .footer-wrapper {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.footer-content .footer-wrapper .footer-icon svg path {
+    stroke: var(--content-brand);
+
+}
+
+.footer-content .footer-wrapper .footer-information span {
+    color: var(--content-brand);
+}
