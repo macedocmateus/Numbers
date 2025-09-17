@@ -4,6 +4,8 @@
 
 @import url(https://fonts.googleapis.com/css?family=Roboto+Flex:regular);
 
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
 :root {
         --content-primary: #fff;
         --content-secondary: #c7c9cc;
@@ -46,6 +48,7 @@
 
         --font-display-input: 700 2rem/1.5 "Sora";
         --font-overline: 700 1rem/1.5 "Roboto Mono", sans-serif;
+        --font-switch-button-label: 400 0.75rem/1.5 "Inter";
 
         --font-paragraph-lg: 500 1rem/1.5 "Roboto Flex", sans-serif;
         --font-paragraph-md: 500 0.875rem/1.5 "Roboto Flex", sans-serif;
