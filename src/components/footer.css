@@ -5,16 +5,22 @@
 
 }
 
-.footer-content .footer-wrapper {
+.footer-content .wrapper {
     display: flex;
     gap: 0.5rem;
 }
 
-.footer-content .footer-wrapper .footer-icon svg path {
+.footer-content .wrapper .icon svg path {
     stroke: var(--content-brand);
 
 }
 
-.footer-content .footer-wrapper .footer-information span {
+.footer-content .wrapper .information span {
     color: var(--content-brand);
+    font: var(--font-paragraph-md);
+}
+
+.footer-content .wrapper .information p {
+    color: var(--content-secondary);
+    font: var(--font-paragraph-sm);
 }

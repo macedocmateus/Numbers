@@ -132,3 +132,18 @@ input:checked+.slider:before {
 .switch-container label[for="switch-button"] {
     font: var(--font-switch-button-label);
 }
+
+.main-content form button {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    background-color: var(--background-tertiary);
+    color: var(--content-primary);
+    font: var(--font-label-sm);
+    gap: 0.5rem;
+    cursor: pointer;
+}
