@@ -93,8 +93,8 @@
 .switch {
     position: relative;
     display: inline-block;
-    width: 1.5rem;
-    height: 1rem;
+    width: 2rem;
+    height: 1.25rem;
 }
 
 
@@ -103,15 +103,15 @@
     cursor: pointer;
     inset: 0;
     background-color: var(--content-tertiary);
-    border-radius: 1rem;
+    border-radius: 1.25rem;
 }
 
 
 .slider:before {
     position: absolute;
     content: "";
-    height: 0.75rem;
-    width: 0.75rem;
+    height: 1rem;
+    width: 1rem;
     bottom: 2px;
     left: 2px;
     background-color: var(--content-primary);
@@ -126,7 +126,7 @@ input:checked+.slider {
 
 
 input:checked+.slider:before {
-    transform: translateX(8px);
+    transform: translateX(12px);
 }
 
 .switch-container label[for="switch-button"] {
