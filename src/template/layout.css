@@ -50,6 +50,7 @@ body {
 @media (768px <=width <=1280px) {
     body {
         background-color: blueviolet;
+        padding-inline: 134px;
     }
 }
 

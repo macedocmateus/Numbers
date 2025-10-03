@@ -6,8 +6,6 @@
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-    max-width: 80%;
-    margin: auto;
 }
 
 .main-content form .orientation {
@@ -24,6 +22,12 @@
 .main-content form .orientation p {
     font: var(--font-paragraph-md);
     color: var(--content-tertiary);
+}
+
+@media (768px <=width <=1280px) {
+    .main-content form .orientation p {
+        color: green;
+    }
 }
 
 .main-content form .form-container {
@@ -75,7 +79,6 @@
         border: 2px solid transparent;
     }
 }
-
 
 .switch-container {
     display: flex;
@@ -138,8 +141,7 @@ input:checked+.slider:before {
 .main-content form button {
     display: flex;
     padding: 1rem;
-    max-width: 360px;
-    /* margin: 0 auto; */
+    max-width: 19.875rem;
     justify-content: center;
     align-items: center;
     border: none;
