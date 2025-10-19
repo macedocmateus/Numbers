@@ -76,6 +76,7 @@ body {
     padding-block: 2.75rem;
     padding-inline: 2.25rem;
 
+
     &::before {
         position: absolute;
         content: '';
@@ -87,11 +88,78 @@ body {
 
 .header-content {
     grid-area: header;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.875rem;
+}
+
+.header-content .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header-content .logo img {
+    width: 2.375rem;
+    height: 2.375rem;
+}
+
+.header-content .logo span {
+    font: var(--font-display-logo);
+    color: var(--content-primary);
+}
+
+.header-content .title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.header-content .title span {
+    font: var(--font-overline);
+
+    background: var(--gradient-content);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-content .title h1 {
+    font: var(--font-display-md);
+    color: var(--content-primary);
 }
 
 .main-content {
     grid-area: main;
+
+    margin-block: 2.625rem 5rem;
 }
+
+.main-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.main-content .orientation {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.main-content .orientation h2 {
+    font: var(--font-label-md);
+    color: var(--content-primary);
+}
+
+.main-content .orientation p {
+    font: var(--font-paragraph-md);
+    color: var(--content-tertiary);
+}
+
+
 
 .footer-content {
     grid-area: footer;
