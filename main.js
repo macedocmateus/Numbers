@@ -1,14 +1,20 @@
 function handleSwitchButton() {
-const switchButton = document.getElementById('switch-button');
-const switchLabel = document.getElementById('switch-label');
+    const switchButton = document.getElementById('switch-button');
+    const switchLabel = document.getElementById('switch-label');
 
-switchButton.addEventListener('change', () => {
-    if (switchButton.checked) {
-        switchLabel.textContent = 'Não repetir número';
-    } else {
-        switchLabel.textContent = 'Repetir número';
+    function updateLabel() {
+        if (switchButton.checked) {
+            switchLabel.textContent = 'Não repetir número';
+        } else {
+            switchLabel.textContent = 'Repetir número';
+        }
     }
-  });
+
+    updateLabel();
+
+    switchButton.addEventListener('change', updateLabel);
 }
 
-export {handleSwitchButton}
+handleSwitchButton();
+
+export { handleSwitchButton }
