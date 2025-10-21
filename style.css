@@ -3,7 +3,7 @@
     --content-secondary: #c7c9cc;
     --content-tertiary: #d9d9d9;
     --content-brand: #c58de7;
-    --color-inverse: #030203;
+    --content-inverse: #030203;
 
     --background-primary: #020202;
     --background-secondary: #111012;
@@ -40,6 +40,7 @@
 
     --font-display-input: 700 2rem/1.5 "Sora";
     --font-overline: 700 1rem/1.5 "Roboto Mono", sans-serif;
+    --font-result-number: 700 4rem/1.5 "Roboto Mono", sans-serif;
 
     --font-paragraph-lg: 500 1rem/1.5 "Roboto Flex", sans-serif;
     --font-paragraph-md: 500 0.875rem/1.5 "Roboto Flex", sans-serif;
@@ -285,7 +286,7 @@ input:checked+.slider:before {
     gap: 0.5rem;
     border-radius: 0.5rem;
     background-color: var(--background-tertiary);
-    color: var(--content-primary);
+    color: var(--content-tertiary);
     font: var(--font-label-sm);
     width: 19.875rem;
     border: 1px solid transparent;
@@ -299,6 +300,72 @@ input:checked+.slider:before {
 }
 
 .main-content .btn-sort svg path {
+    stroke: var(--content-primary);
+}
+
+.main-content .result-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-block: 4.375rem;
+    text-align: center;
+    align-items: center;
+}
+
+.main-content .header-sort h2 {
+    font: var(--font-label-md);
+    color: var(--content-primary);
+}
+
+.main-content .header-sort p {
+    font: var(--font-overline);
+    color: var(--content-secondary);
+}
+
+.main-content .sort-numbers {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.main-content .sort-numbers .sort-number {
+    width: 6.25rem;
+    height: 6.25rem;
+    background-color: var(--content-brand);
+    border-radius: 1.75rem;
+    padding: 1.375rem 1.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content .sort-numbers .sort-number span {
+    font: var(--font-result-number);
+    color: var(--content-inverse);
+}
+
+.main-content .btn-sort-again {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--background-tertiary);
+    color: var(--content-tertiary);
+    font: var(--font-label-sm);
+    width: 19.875rem;
+    border: 1px solid transparent;
+
+    &:hover {
+        background: linear-gradient(var(--background-secondary), var(--background-secondary)) padding-box,
+            var(--gradient-border) border-box;
+        background-clip: padding-box, border-box;
+        border-color: transparent;
+    }
+}
+
+.main-content .btn-sort-again svg path {
     stroke: var(--content-primary);
 }
 
