@@ -328,6 +328,7 @@ input:checked+.slider:before {
 .main-content .sort-numbers {
     display: flex;
     gap: 0.25rem;
+    flex-wrap: wrap;
 }
 
 .main-content .sort-numbers .sort-number {

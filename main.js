@@ -39,11 +39,71 @@ function preventFormSubmit() {
     }
 }
 
+function drawingNumbers() {
+    const quantNumbersInput = document.getElementById('quant-numbers');
+    const startingNumberInput = document.getElementById('starting-number');
+    const finalNumberInput = document.getElementById('final-number');
+    const switchButton = document.getElementById('switch-button');
+    const quantNumbersValue = quantNumbersInput?.value.trim();
+    const startingNumberValue = startingNumberInput?.value.trim();
+    const finalNumberValue = finalNumberInput?.value.trim();
+    const noRepeat = switchButton?.checked || false;
+
+    if (!quantNumbersValue || !startingNumberValue || !finalNumberValue) {
+        return [];
+    }
+
+    const quantNumbers = parseInt(quantNumbersValue, 10);
+    const startingNumber = parseInt(startingNumberValue, 10);
+    const finalNumber = parseInt(finalNumberValue, 10);
+
+    if (isNaN(quantNumbers) || isNaN(startingNumber) || isNaN(finalNumber)) {
+        return [];
+    }
+
+    if (quantNumbers <= 0 || startingNumber === null || finalNumber === null) {
+        return [];
+    }
+
+    const sortedNumbers = [];
+    
+    const min = Math.min(startingNumber, finalNumber);
+    const max = Math.max(startingNumber, finalNumber);
+
+    if (noRepeat) {
+        const availableNumbers = [];
+        for (let i = min; i <= max; i++) {
+            availableNumbers.push(i);
+        }
+        const quantity = Math.min(quantNumbers, availableNumbers.length);
+        
+        for (let i = 0; i < quantity; i++) {
+            const randomIndex = Math.floor(Math.random() * availableNumbers.length);
+            sortedNumbers.push(availableNumbers[randomIndex]);
+            availableNumbers.splice(randomIndex, 1);
+        }
+    } else {
+        for (let i = 0; i < quantNumbers; i++) {
+            const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+            sortedNumbers.push(randomNumber);
+        }
+    }
+    return sortedNumbers;
+}
+
 function handleSortNumbers() {
     const sortButton = document.querySelector('.btn-sort');
     const mainContent = document.querySelector('.main-content');
-
+    
     sortButton.addEventListener('click', () => {
+        const sortedNumbers = drawingNumbers();
+
+        const numbersHTML = sortedNumbers.map(number => `
+            <div class="sort-number">
+                <span>${number}</span>
+            </div>
+        `).join('');
+
         mainContent.innerHTML = `
         <div class="result-container">
             <div class="header-sort">
@@ -56,17 +116,7 @@ function handleSortNumbers() {
             </div>
         
             <div class="sort-numbers">
-                <div class="sort-number">
-                    <span>
-                        23
-                    </span>
-                </div>
-                    
-                <div class="sort-number">
-                    <span>
-                        12
-                    </span>
-                </div>
+                ${numbersHTML}
             </div>
             
             <button class="btn-sort-again">
