@@ -1,3 +1,6 @@
+let sortCounter = 0;
+let originalFormHTML = '';
+
 function handleSwitchButton() {
     const switchButton = document.getElementById('switch-button');
     const switchLabel = document.getElementById('switch-label');
@@ -29,6 +32,27 @@ function handleInputGradient() {
     });
 }
 
+function handleNumericInputValidation() {
+    const inputs = document.querySelectorAll('.main-content .form-item input');
+
+    inputs.forEach(input => {
+        input.addEventListener('input', (event) => {
+            let value = event.target.value;
+            value = value.replace(/[^\d]/g, '');
+
+            if (value.length > 1 && value.startsWith('0')) {
+                value = value.replace(/^0+/, '');
+            }
+
+            if (value === '0') {
+                value = '';
+            }
+
+            event.target.value = value;
+        });
+    });
+}
+
 function preventFormSubmit() {
     const form = document.querySelector('.main-content form');
     
@@ -50,21 +74,14 @@ function drawingNumbers() {
     const noRepeat = switchButton?.checked || false;
 
     if (!quantNumbersValue || !startingNumberValue || !finalNumberValue) {
-        return [];
+        alert("Preencha todos os campos numéricos")
+        return
     }
 
     const quantNumbers = parseInt(quantNumbersValue, 10);
     const startingNumber = parseInt(startingNumberValue, 10);
     const finalNumber = parseInt(finalNumberValue, 10);
-
-    if (isNaN(quantNumbers) || isNaN(startingNumber) || isNaN(finalNumber)) {
-        return [];
-    }
-
-    if (quantNumbers <= 0 || startingNumber === null || finalNumber === null) {
-        return [];
-    }
-
+    
     const sortedNumbers = [];
     
     const min = Math.min(startingNumber, finalNumber);
@@ -94,9 +111,17 @@ function drawingNumbers() {
 function handleSortNumbers() {
     const sortButton = document.querySelector('.btn-sort');
     const mainContent = document.querySelector('.main-content');
-    
+
+    if (!originalFormHTML) {
+        originalFormHTML = mainContent.innerHTML;
+    }
+
     sortButton.addEventListener('click', () => {
         const sortedNumbers = drawingNumbers();
+
+        if (!sortedNumbers) return;
+
+        sortCounter++;
 
         const numbersHTML = sortedNumbers.map(number => `
             <div class="sort-number">
@@ -111,14 +136,14 @@ function handleSortNumbers() {
                     RESULTADO DO SORTEIO
                 </h2>
                 <p>
-                    1º RESULTADO
+                    <span>${sortCounter}</span>º RESULTADO
                 </p>
             </div>
-        
+
             <div class="sort-numbers">
                 ${numbersHTML}
             </div>
-            
+
             <button class="btn-sort-again">
                 SORTEAR NOVAMENTE
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -128,9 +153,30 @@ function handleSortNumbers() {
             </button>
         </div>
         `
+
+        sortNumbersAgain();
     });
 }
+
+function sortNumbersAgain() {
+    const btnSortAgain = document.querySelector('.btn-sort-again');
+
+    if (btnSortAgain) {
+        btnSortAgain.addEventListener('click', () => {
+            const mainContent = document.querySelector('.main-content');
+            mainContent.innerHTML = originalFormHTML;
+
+            preventFormSubmit();
+            handleSwitchButton();
+            handleInputGradient();
+            handleNumericInputValidation();
+            handleSortNumbers();
+        });
+    }
+}
+
 preventFormSubmit();
 handleSwitchButton();
 handleInputGradient();
+handleNumericInputValidation();
 handleSortNumbers();
