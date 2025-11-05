@@ -412,7 +412,6 @@ input:checked+.slider:before {
     .logo {
         justify-content: start;
         margin-bottom: 5.5rem;
-
     }
 
     .header-content {
@@ -421,7 +420,7 @@ input:checked+.slider:before {
 
     .main-content {
         margin-block: 2.125rem;
-        width: fit-content;
+        max-width: 30.125rem;
     }
 
     .main-content .result-container {
@@ -433,7 +432,16 @@ input:checked+.slider:before {
     }
 }
 
-@media (width >=64rem) {
+@media (width >=75rem) {
+    .app {
+        padding-block: 4.75rem 9.5rem;
+        padding-inline: 7.5rem 8.375rem;
+    }
+
+    .header-content {
+        width: 32rem;
+    }
+
     .header-content .title h1 {
         font: var(--font-display-lg);
     }
