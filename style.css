@@ -421,6 +421,7 @@ input:checked+.slider:before {
 
     .main-content {
         margin-block: 2.125rem;
+        width: fit-content;
     }
 
     .main-content .result-container {
